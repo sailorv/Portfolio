@@ -1,0 +1,167 @@
+@use "main";
+
+$width: 'content: attr(data-percentage);';
+
+$primaryColor: #FFCDB2;
+$secondaryColor: #FFB4A2;
+$tertiaryColor: #6D6875;
+
+.industry {
+  font-size: .8em;
+  color: #777;
+  display: block;
+}
+
+/* Bar Graph Horizontal */
+.bar-graph {
+  .bar-graph-label {
+    -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+    -moz-animation: fade-in-text 2.2s 0.1s forwards;
+    animation: fade-in-text 2.2s 0.1s forwards;
+    opacity: 0;
+  }
+
+}
+.bar-graph-horizontal > div {
+  float: left;
+  margin-bottom: 8px;
+  width: 100%;
+  &.bar-graph-label {
+    margin: 20px 0 10px 0;
+    width: auto;
+    display: block;
+  }
+  .bar {
+    border-radius: 3px 0 0 3px;
+    height: 55px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+  }
+}
+
+.bar-graph-container {
+  background-color: $primaryColor;
+  width: 100%;
+  height: 55px;
+  border-radius: 3px;
+}
+
+.bar-graph-one .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: $tertiaryColor;
+  font-family: 'Blinker', sans-serif;
+  content: attr(data-percentage);
+  position: absolute;
+  right: 16px;
+  top: 17px;
+}
+
+.bar-graph-one .bar-one .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-one 1.2s 0.1s forwards;
+  -moz-animation: show-bar-one 1.2s 0.1s forwards;
+  animation: show-bar-one 1.2s 0.1s forwards;
+}
+
+.bar-graph-one .bar-two .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-two 1.2s 0.2s forwards;
+  -moz-animation: show-bar-two 1.2s 0.2s forwards;
+  animation: show-bar-two 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-three .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-three 1.2s 0.2s forwards;
+  -moz-animation: show-bar-three 1.2s 0.2s forwards;
+  animation: show-bar-three 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-four .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-four 1.2s 0.2s forwards;
+  -moz-animation: show-bar-four 1.2s 0.2s forwards;
+  animation: show-bar-four 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-five .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-five 1.2s 0.2s forwards;
+  -moz-animation: show-bar-five 1.2s 0.2s forwards;
+  animation: show-bar-five 1.2s 0.2s forwards;
+}
+
+.bar-graph-one .bar-six .bar {
+  background-color: $secondaryColor;
+  -webkit-animation: show-bar-six 1.2s 0.2s forwards;
+  -moz-animation: show-bar-six 1.2s 0.2s forwards;
+  animation: show-bar-six 1.2s 0.2s forwards;
+}
+
+/* Bar Graph Horizontal Animations */
+@-webkit-keyframes show-bar-one {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 92.2%;
+  }
+}
+
+@-webkit-keyframes show-bar-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 98.0%;
+  }
+}
+
+@-webkit-keyframes show-bar-three {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 93.8%;
+  }
+}
+
+@-webkit-keyframes show-bar-four {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 93.1%;
+  }
+}
+
+@-webkit-keyframes show-bar-five {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 83.1%;
+  }
+}
+
+@-webkit-keyframes show-bar-six {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95.2%;
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

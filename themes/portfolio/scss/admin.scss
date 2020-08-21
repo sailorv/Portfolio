@@ -1,0 +1,12 @@
+nav[role="navigation"].tabs {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 100;
+  .nav-tabs > li a {
+    background: #fff;
+    border: solid 1px #eee;
+  }
+}

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Unna|Blinker:300,400,700&display=swap');
+
+@font-face {
+  font-family: 'Caslon 540 LT Std';
+  src: url("../fonts/Caslon540LTStd-Roman.woff2") format("woff2"), url("../fonts/CaslonFiveForty-ItalicOsF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Caslon 540 LT Italic';
+  src: url("../fonts/CaslonFiveForty-ItalicOsF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Schnyder L Light';
+  src: url("../fonts/SchnyderLLight.woff2") format("woff2");
+}
+
+$fontParagraph: 'Caslon 540 LT Std', serif;
+$fontSansSerif: 'Blinker', sans-serif;
+$fontDisplay: 'Schnyder L Light', serif;
+$fontItalic: 'Caslon 540 LT Italic', serif;
+
+$blue: rgba(65,167,255,.7);
+$lightGrey: #e6dfdb;
+
+$primaryColor: #FFCDB2;
+$secondaryColor: #FFB4A2;
+$tertiaryColor: #6D6875;
+
+
+/* Typography */
+em {
+  font-family: $fontItalic;
+}
+h3, h4 {
+  font-family: $fontDisplay;
+  font-size: 1.3em;
+}
+
+/* Header */
+header.navbar.navbar-default {
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  padding: 1em 0;
+  color: #000;
+  overflow: hidden;
+  transition: height .2s ease-in-out;
+  .logo {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0;
+  }
+  a {
+    background: none;
+  }
+  #toggle-about {
+    #web-developer-logo {
+      width: 33%;
+    }
+    i.lni {
+      font-size:10px;
+      position: relative; top: -3px;
+      display: none;
+    }
+  }
+  &.expand {
+    height: 400px;
+  }
+  .hidden-content {
+    margin-top: 75px;
+  }
+  .site-intro {
+    font-family: $fontItalic;
+    font-style: italic;
+    display: inline-block;
+  }
+  .about-me {
+    font-family: $fontItalic;
+    font-style: italic;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .social {
+    position: absolute; right: 0;
+    font-family: $fontItalic;
+    font-style: italic;
+    margin-top: 10px;
+    a {
+      background: none;
+      color: #000;
+      font-size: 1.5em;
+      margin: auto 10px;
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+  }
+}
+
+
+body {
+  margin-top: 50px;
+}
+
+div[role="main"] {
+a {
+  color: #222;
+  background: linear-gradient($primaryColor, $primaryColor);
+  background-size: 100% 0.4rem;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  transition: all 0.08s linear 0s;
+  text-decoration: none;
+}
+a:hover {
+    background-size: 100% 80%;
+    text-decoration: none;
+    color: #000;
+}
+}
+
+.margin-bottom-sm {
+    margin-bottom: 5rem;
+}
+
+.project-item {
+  h2 {
+    margin-top: 1rem;
+    font-size: 26pt;
+    text-transform: uppercase;
+  }
+  .project-client {
+    font-family: $fontItalic;
+    font-style: italic;
+    &:before {
+      content: "\2014";
+    }
+  }
+}
+
+#blog-posts {
+  text-align: right;
+}
+
+.tags ul {
+  display: inline;
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+  font-family: $fontSansSerif;
+  li {
+    display: inline-block;
+    list-style: none;
+    padding: 3px 15px;
+    background-color: $lightGrey;
+    font-size: .7em;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+#block-views-block-favorite-links-block-1 {
+  .view-content {
+    font-size: .8em;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  .link-cat {
+    font-family: $fontSansSerif;
+    font-size: 1rem;
+    text-transform: lowercase;
+  }
+}
+
+body {
+ font-family: $fontParagraph;
+ font-size: 16pt;
+}
+h1, h2, h3, h4 {
+ font-family: $fontDisplay;
+}
+button {
+  font-family: $fontSansSerif;
+  text-transform: uppercase;
+}
+
+/* Article page */
+article h3.title {
+  font-size: 40pt;
+  text-transform: uppercase;
+}
+article .article-intro {
+  margin-bottom: 2em;
+  position: relative;
+}
+article .article-meta {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  h4 {
+    font-size: 1.9rem;
+  }
+}
+article .article-intro .date {
+  font-style: italic;
+  font-family: $fontItalic;
+}
+
+article blockquote {
+  border-left: none;
+  margin-left: 2em;
+  padding-left: 1em;
+  font-family: $fontDisplay;
+  font-size: 2em;
+}
+
+.skills {
+  background-color: $lightGrey;
+  padding: 20px;
+  margin: 1em 0;
+  ul.skills-list {
+    margin: 0; padding: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      font-family: $fontSansSerif;
+      list-style: none;
+      font-size: .8em;
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}
+
+.image-caption {
+  font-family: $fontSansSerif;
+  font-size: .8em;
+  padding: 20px;
+}
+
+/* Portfolio nodes */
+h3.italic-heading {
+  font-family: $fontItalic;
+  font-style: italic;
+}
+
+/* Blog nodes */
+.page-node-type-article{
+  h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+  }
+  .emphasis {
+  }
+}
+
+/* Bootstrap overrides */
+.page-header {
+  border-bottom: 0;
+}
+
+/* Specific node styles */
+.page-node-type-portfolio {
+  h2 {
+    font-size: 2.3em;
+    text-transform: uppercase;
+  }
+}
+article[data-history-node-id='13'] { /* Identity Guide CSS */
+  a:hover.btn.download {
+    background-color: $secondaryColor;
+  }
+  a.btn.download {
+      font-family: $fontSansSerif;
+      text-align: left;
+      background-color: $primaryColor;
+      background-image: none;
+      color: $tertiaryColor;
+      border-radius: 0;
+  }
+  .output-wrapper .row {
+    border: solid 1px #bca2be;
+    margin: .3em 0;
+    padding: 15px 0;
+  }
+}
+
+/* Footer */
+.footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #444;
+    font-size: .8em;
+    font-family: $fontSansSerif;
+    a {
+      color: #444;
+      background: linear-gradient($primaryColor, $primaryColor);
+      background-size: 100% 0.4rem;
+      background-repeat: no-repeat;
+      background-position: left 0 bottom 0;
+      transition: all 0.08s linear 0s;
+      text-decoration: none;
+    }
+    a:hover {
+        background-size: 100% 80%;
+        text-decoration: none;
+        color: #444;
+    }
+}

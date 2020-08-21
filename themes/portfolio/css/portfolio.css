@@ -1,0 +1,79 @@
+article[data-history-node-id='11'] a {
+  color: #222;
+  background: linear-gradient(#FFCDB2, #FFCDB2);
+  background-size: 100% 0.4rem;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  transition: all 0.08s linear 0s;
+  text-decoration: none; }
+
+article[data-history-node-id='11'] a:hover {
+  background-size: 100% 80%;
+  text-decoration: none;
+  color: #222; }
+
+/* Black background */
+.black-bg {
+  background-color: #000;
+  color: #f5f3eb;
+  padding: 6em 0;
+  margin: 0 -15px; }
+  .black-bg a {
+    text-decoration: none;
+    border-bottom: solid 2px #f5f3eb !important;
+    background: none !important;
+    color: #f5f3eb !important;
+    font-weight: bold; }
+    .black-bg a:hover {
+      background-color: #e3ddd7 !important;
+      color: #000 !important; }
+
+.col-md-4.image-with-border {
+  position: relative;
+  padding: 0; }
+  .col-md-4.image-with-border img {
+    transform: translate(-40px, -20px);
+    overflow: visible; }
+  .col-md-4.image-with-border .border-box {
+    display: block;
+    height: 100%;
+    width: 100%;
+    content: "&nbsp";
+    border: solid 4px white;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.transparent-black {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  height: 100%;
+  margin-bottom: 0; }
+
+/* Black page */
+body[data-history-node-id='17'] {
+  color: #fff; }
+  body[data-history-node-id='17'] header.navbar-default.navbar {
+    background-color: transparent; }
+    body[data-history-node-id='17'] header.navbar-default.navbar a, body[data-history-node-id='17'] header.navbar-default.navbar .social a, body[data-history-node-id='17'] header.navbar-default.navbar i.lni {
+      color: #fff; }
+    body[data-history-node-id='17'] header.navbar-default.navbar .social a:hover, body[data-history-node-id='17'] header.navbar-default.navbar a:hover {
+      color: #FFCDB2;
+      fill: #FFCDB2;
+      -webkit-text-fill-color: #FFCDB2; }
+    body[data-history-node-id='17'] header.navbar-default.navbar #catherine-parkinson-logo, body[data-history-node-id='17'] header.navbar-default.navbar #web-developer-logo {
+      fill: #fff; }
+  body[data-history-node-id='17'] .transparent-black {
+    background-color: rgba(0, 0, 0, 0.6); }
+  body[data-history-node-id='17'] .footer {
+    color: #fff;
+    font-family: 'Blinker', sans-serif; }
+    body[data-history-node-id='17'] .footer a {
+      color: #fff;
+      background: none;
+      text-decoration: underline; }
+    body[data-history-node-id='17'] .footer a:hover {
+      text-decoration: none;
+      color: #fff; }
+    body[data-history-node-id='17'] .footer path.path01 {
+      fill: #fff; }

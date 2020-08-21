@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Unna|Blinker:300,400,700&display=swap");
+@font-face {
+  font-family: 'Caslon 540 LT Std';
+  src: url("../fonts/Caslon540LTStd-Roman.woff2") format("woff2"), url("../fonts/CaslonFiveForty-ItalicOsF.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Caslon 540 LT Italic';
+  src: url("../fonts/CaslonFiveForty-ItalicOsF.woff2") format("woff2"); }
+
+@font-face {
+  font-family: 'Schnyder L Light';
+  src: url("../fonts/SchnyderLLight.woff2") format("woff2"); }
+
+/* Typography */
+em {
+  font-family: "Caslon 540 LT Italic", serif; }
+
+h3, h4 {
+  font-family: "Schnyder L Light", serif;
+  font-size: 1.3em; }
+
+/* Header */
+header.navbar.navbar-default {
+  background-color: #fff;
+  border: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 75px;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  padding: 1em 0;
+  color: #000;
+  overflow: hidden;
+  transition: height .2s ease-in-out; }
+  header.navbar.navbar-default .logo {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 0; }
+  header.navbar.navbar-default a {
+    background: none; }
+  header.navbar.navbar-default #toggle-about #web-developer-logo {
+    width: 33%; }
+  header.navbar.navbar-default #toggle-about i.lni {
+    font-size: 10px;
+    position: relative;
+    top: -3px;
+    display: none; }
+  header.navbar.navbar-default.expand {
+    height: 400px; }
+  header.navbar.navbar-default .hidden-content {
+    margin-top: 75px; }
+  header.navbar.navbar-default .site-intro {
+    font-family: "Caslon 540 LT Italic", serif;
+    font-style: italic;
+    display: inline-block; }
+  header.navbar.navbar-default .about-me {
+    font-family: "Caslon 540 LT Italic", serif;
+    font-style: italic;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer; }
+  header.navbar.navbar-default .social {
+    position: absolute;
+    right: 0;
+    font-family: "Caslon 540 LT Italic", serif;
+    font-style: italic;
+    margin-top: 10px; }
+    header.navbar.navbar-default .social a {
+      background: none;
+      color: #000;
+      font-size: 1.5em;
+      margin: auto 10px; }
+      header.navbar.navbar-default .social a:hover {
+        color: #FFB4A2; }
+
+body {
+  margin-top: 50px; }
+
+div[role="main"] a {
+  color: #222;
+  background: linear-gradient(#FFCDB2, #FFCDB2);
+  background-size: 100% 0.4rem;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+  transition: all 0.08s linear 0s;
+  text-decoration: none; }
+
+div[role="main"] a:hover {
+  background-size: 100% 80%;
+  text-decoration: none;
+  color: #000; }
+
+.margin-bottom-sm {
+  margin-bottom: 5rem; }
+
+.project-item h2 {
+  margin-top: 1rem;
+  font-size: 26pt;
+  text-transform: uppercase; }
+
+.project-item .project-client {
+  font-family: "Caslon 540 LT Italic", serif;
+  font-style: italic; }
+  .project-item .project-client:before {
+    content: "\2014"; }
+
+#blog-posts {
+  text-align: right; }
+
+.tags ul {
+  display: inline;
+  margin: 0;
+  line-height: 1;
+  padding: 0;
+  font-family: "Blinker", sans-serif; }
+  .tags ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 3px 15px;
+    background-color: #e6dfdb;
+    font-size: .7em;
+    margin-right: 3px;
+    margin-bottom: 3px; }
+
+#block-views-block-favorite-links-block-1 .view-content {
+  font-size: .8em; }
+
+#block-views-block-favorite-links-block-1 p {
+  margin-bottom: 1em; }
+
+#block-views-block-favorite-links-block-1 .link-cat {
+  font-family: "Blinker", sans-serif;
+  font-size: 1rem;
+  text-transform: lowercase; }
+
+body {
+  font-family: "Caslon 540 LT Std", serif;
+  font-size: 16pt; }
+
+h1, h2, h3, h4 {
+  font-family: "Schnyder L Light", serif; }
+
+button {
+  font-family: "Blinker", sans-serif;
+  text-transform: uppercase; }
+
+/* Article page */
+article h3.title {
+  font-size: 40pt;
+  text-transform: uppercase; }
+
+article .article-intro {
+  margin-bottom: 2em;
+  position: relative; }
+
+article .article-meta {
+  position: absolute;
+  bottom: 0;
+  left: 50%; }
+  article .article-meta h4 {
+    font-size: 1.9rem; }
+
+article .article-intro .date {
+  font-style: italic;
+  font-family: "Caslon 540 LT Italic", serif; }
+
+article blockquote {
+  border-left: none;
+  margin-left: 2em;
+  padding-left: 1em;
+  font-family: "Schnyder L Light", serif;
+  font-size: 2em; }
+
+.skills {
+  background-color: #e6dfdb;
+  padding: 20px;
+  margin: 1em 0; }
+  .skills ul.skills-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center; }
+    .skills ul.skills-list li {
+      font-family: "Blinker", sans-serif;
+      list-style: none;
+      font-size: .8em;
+      display: inline-block;
+      margin-right: 20px; }
+
+.image-caption {
+  font-family: "Blinker", sans-serif;
+  font-size: .8em;
+  padding: 20px; }
+
+/* Portfolio nodes */
+h3.italic-heading {
+  font-family: "Caslon 540 LT Italic", serif;
+  font-style: italic; }
+
+/* Blog nodes */
+.page-node-type-article h1 {
+  text-transform: uppercase;
+  font-size: 3em; }
+
+/* Bootstrap overrides */
+.page-header {
+  border-bottom: 0; }
+
+/* Specific node styles */
+.page-node-type-portfolio h2 {
+  font-size: 2.3em;
+  text-transform: uppercase; }
+
+article[data-history-node-id='13'] {
+  /* Identity Guide CSS */ }
+  article[data-history-node-id='13'] a:hover.btn.download {
+    background-color: #FFB4A2; }
+  article[data-history-node-id='13'] a.btn.download {
+    font-family: "Blinker", sans-serif;
+    text-align: left;
+    background-color: #FFCDB2;
+    background-image: none;
+    color: #6D6875;
+    border-radius: 0; }
+  article[data-history-node-id='13'] .output-wrapper .row {
+    border: solid 1px #bca2be;
+    margin: .3em 0;
+    padding: 15px 0; }
+
+/* Footer */
+.footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #444;
+  font-size: .8em;
+  font-family: "Blinker", sans-serif; }
+  .footer a {
+    color: #444;
+    background: linear-gradient(#FFCDB2, #FFCDB2);
+    background-size: 100% 0.4rem;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0;
+    transition: all 0.08s linear 0s;
+    text-decoration: none; }
+  .footer a:hover {
+    background-size: 100% 80%;
+    text-decoration: none;
+    color: #444; }

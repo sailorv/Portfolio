@@ -1,0 +1,138 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the basic html structure of a single
+ * Drupal page.
+ *
+ * Variables:
+ * - $css: An array of CSS files for the current page.
+ * - $language: (object) The language the site is being displayed in.
+ *   $language->language contains its textual representation.
+ *   $language->dir contains the language direction. It will either be 'ltr' or
+ *   'rtl'.
+ * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
+ * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
+ * - $head_title: A modified version of the page title, for use in the TITLE
+ *   tag.
+ * - $head_title_array: (array) An associative array containing the string parts
+ *   that were used to generate the $head_title variable, already prepared to be
+ *   output as TITLE tag. The key/value pairs may contain one or more of the
+ *   following, depending on conditions:
+ *   - title: The title of the current page, if any.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site, if any, and if there is no title.
+ * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
+ *   so on).
+ * - $styles: Style tags necessary to import all CSS files for the page.
+ * - $scripts: Script tags necessary to load the JavaScript files and settings
+ *   for the page.
+ * - $page_top: Initial markup from any modules that have altered the
+ *   page. This variable should always be output first, before all other dynamic
+ *   content.
+ * - $page: The rendered page content.
+ * - $page_bottom: Final closing markup from any modules that have altered the
+ *   page. This variable should always be output last, after all other dynamic
+ *   content.
+ * - $classes String of classes that can be used to style contextually through
+ *   CSS.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_html()
+ * @see template_preprocess()
+ * @see template_preprocess_html()
+ * @see template_process()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'page-node-type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+    theme.settings.navbar_position ? 'navbar-is-' ~ theme.settings.navbar_position,
+    theme.has_glyphicons ? 'has-glyphicons',
+  ]
+%}
+<!DOCTYPE html>
+<html {{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <!-- Line icons -->
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+  <body{{ attributes.addClass(body_classes) }} style="background: url('/portfolio-pantheon/sites/default/files/2020-08/bw-stormclouds.jpg') center center no-repeat; background-size: cover;">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+
+    {%
+      set classes = [
+        node.bundle|clean_class,
+        node.isPromoted() ? 'is-promoted',
+        node.isSticky() ? 'is-sticky',
+        not node.isPublished() ? 'is-unpublished',
+        view_mode ? view_mode|clean_class,
+        'clearfix',
+      ]
+    %}
+
+    <article{{ attributes.addClass(classes) }} id="{{ node.id }}">
+    <div>
+      <div class="container">
+        {% if label %}
+          <div class="row">
+            <div class="col-12 title-wrapper text-center">
+              <h1>The trials <em>&amp;</em> tribulations of building a portfolio website
+      </h1>
+            </div>
+          </div>
+        {% endif %}
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+          <footer>
+            {{ author_picture }}
+            <div{{ author_attributes.addClass('author') }}>
+              {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+              {{ metadata }}
+            </div>
+          </footer>
+        {% endif %}
+
+        <div{{ content_attributes.addClass('content') }}>
+          <div class="row" style="margin: 2em 0;">
+            <div class="col-md-12">
+                {{ content.body }}
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 4em; display: flex; flex-direction: row;">
+            <div class="col-md-6">
+              <div class="transparent-black">
+                <h3 class="italic-heading">&mdash; The goals of this project</h3>
+                  {{ content.field_portfolio_goals }}
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="transparent-black">
+                <h3 class="italic-heading">&mdash; The solutions</h3>
+                  {{ content.field_portfolio_solutions }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.container -->
+    </div><!-- /.black-bg -->
+
+      {{ content.field_portfolio_html_block }}
+
+    </article>
+
+
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
