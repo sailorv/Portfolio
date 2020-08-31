@@ -100,8 +100,12 @@ header.navbar.navbar-default {
       color: #000;
       font-size: 1.5em;
       margin: auto 10px;
+      .icon-description {
+        display: none;
+      }
       &:hover {
         color: $secondaryColor;
+        text-decoration: none;
       }
     }
   }

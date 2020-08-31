@@ -52,7 +52,8 @@ article[data-history-node-id='11'] a:hover {
 
 /* Black page */
 body[data-history-node-id='17'] {
-  color: #fff; }
+  color: #fff;
+  background-color: #000; }
   body[data-history-node-id='17'] header.navbar-default.navbar {
     background-color: transparent; }
     body[data-history-node-id='17'] header.navbar-default.navbar a, body[data-history-node-id='17'] header.navbar-default.navbar .social a, body[data-history-node-id='17'] header.navbar-default.navbar i.lni {

@@ -74,8 +74,11 @@ header.navbar.navbar-default {
       color: #000;
       font-size: 1.5em;
       margin: auto 10px; }
+      header.navbar.navbar-default .social a .icon-description {
+        display: none; }
       header.navbar.navbar-default .social a:hover {
-        color: #FFB4A2; }
+        color: #FFB4A2;
+        text-decoration: none; }
 
 body {
   margin-top: 50px; }
