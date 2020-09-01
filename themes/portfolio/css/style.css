@@ -20,6 +20,7 @@ h3, h4 {
   font-size: 1.3em; }
 
 /* Header */
+/* Medium and above */
 header.navbar.navbar-default {
   background-color: #fff;
   border: none;
@@ -79,6 +80,19 @@ header.navbar.navbar-default {
       header.navbar.navbar-default .social a:hover {
         color: #FFB4A2;
         text-decoration: none; }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  header.navbar.navbar-default {
+    height: auto; }
+    header.navbar.navbar-default .logo {
+      width: 80%;
+      display: block;
+      position: relative; }
+    header.navbar.navbar-default .social {
+      position: relative;
+      display: block;
+      text-align: center; } }
 
 body {
   margin-top: 50px; }

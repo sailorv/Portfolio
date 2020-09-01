@@ -37,7 +37,10 @@ h3, h4 {
   font-size: 1.3em;
 }
 
+
 /* Header */
+
+/* Medium and above */
 header.navbar.navbar-default {
   background-color: #fff;
   border: none;
@@ -110,6 +113,24 @@ header.navbar.navbar-default {
     }
   }
 }
+/* Mobile styles */
+@media (max-width: 768px) {
+  header.navbar.navbar-default {
+    height: auto;
+    .logo {
+      width: 80%;
+      display: block;
+      position: relative;
+    }
+    .social {
+      position: relative;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+
 
 
 body {
